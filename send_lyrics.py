@@ -7,7 +7,7 @@ account_sid = ""
 auth_token  = ""
 #Instantiate class TwilioRestClient with your credentials
 client = Client(account_sid, auth_token)
-twilio_number = "+1"
+twilio_number = "+1" #add your twilio number here
  
 lyrics = open("despacito.txt", "r").readlines()
 
@@ -20,6 +20,6 @@ for line in lyrics:
         to="+1",
         from_=twilio_number)
     count += 1
-    n = random.randrange(90,300)
+    n = random.randrange(90,300) #adjust seconds range as desired 
     print(str(count)+'-'+str(n))
     time.sleep(n)
